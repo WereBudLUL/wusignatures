@@ -49,7 +49,7 @@ namespace Certificates
             void ReadHash(byte[] hash, byte[] signature)
             {
   
-                bool ok = rSAprivate.VerifyHash(hash, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
+                bool ok = rSApublic.VerifyHash(hash, signature, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
                 Console.WriteLine(ok);
                 
             }
